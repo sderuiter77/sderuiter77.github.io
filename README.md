@@ -51,7 +51,8 @@ If you encounter issues with the GitHub Actions workflow:
 1. Make sure GitHub Pages is enabled in your repository settings
 2. Check that you have the correct permissions set for GitHub Actions
 3. Verify that the repository is public or that you have GitHub Pages enabled for private repositories
-4. Try manually deploying using Option 2 above
+4. If you see dependency lock file errors, make sure package-lock.json is committed to your repository
+5. Try manually deploying using Option 2 above
 
 ## Development
 
@@ -62,6 +63,18 @@ npm run dev
 \`\`\`
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### First-time Setup
+
+When setting up the project for the first time:
+
+1. Clone the repository
+2. Install dependencies:
+   \`\`\`
+   npm install
+   \`\`\`
+   This will generate a proper package-lock.json file
+3. Make sure to commit the package-lock.json file to your repository
 
 ## Game Rules
 
@@ -78,4 +91,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   - Regular rolls (e.g., 6-5 = 65, 6-4 = 64)
 \`\`\`
 
-Let's also add a simple script to help with manual deployment:
+Let's also create a simple shell script to help with generating a proper package-lock.json file:
