@@ -25,12 +25,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-          # Disable cache to avoid lock file issues
-          # cache: 'npm'
+          cache: 'npm'
       
       - name: Install dependencies
-        # Use --no-package-lock to avoid lock file issues
-        run: npm install --no-package-lock
+        # Use clean install to ensure we use the exact versions in package-lock.json
+        run: npm ci
       
       - name: Build
         run: npm run build

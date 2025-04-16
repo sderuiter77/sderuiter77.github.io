@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "deploy": "node scripts/deploy.js",
-    "generate-lock": "bash scripts/generate-lock.sh"
+    "generate-lock": "bash scripts/generate-lock.sh",
+    "manual-deploy": "bash scripts/manual-deploy.sh"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
@@ -18,6 +19,7 @@
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.284.0",
     "next": "^14.0.0",
+    "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwind-merge": "^1.14.0",
