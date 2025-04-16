@@ -44,6 +44,15 @@ A mobile-friendly implementation of the popular Mexen drinking dice game.
 8. Push the `gh-pages` branch to GitHub
 9. In your repository settings, enable GitHub Pages and set the source to the `gh-pages` branch
 
+### Troubleshooting GitHub Actions
+
+If you encounter issues with the GitHub Actions workflow:
+
+1. Make sure GitHub Pages is enabled in your repository settings
+2. Check that you have the correct permissions set for GitHub Actions
+3. Verify that the repository is public or that you have GitHub Pages enabled for private repositories
+4. Try manually deploying using Option 2 above
+
 ## Development
 
 To run the development server:
@@ -69,39 +78,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   - Regular rolls (e.g., 6-5 = 65, 6-4 = 64)
 \`\`\`
 
-Let's also create a simple `.gitignore` file:
-
-```text file=".gitignore"
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+Let's also add a simple script to help with manual deployment:
